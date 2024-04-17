@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>券確認ページ</title>
+</head>
+<body>
+    <h1>券確認ページ</h1>
+    <div id="serialDisplay"></div>
+
+    <script>
+        // クエリパラメータからシリアルコードを取得
+        const urlParams = new URLSearchParams(window.location.search);
+        const serialCode = urlParams.get('serial');
+
+        // シリアルコードを表示
+        const serialDisplay = document.getElementById('serialDisplay');
+        serialDisplay.textContent = `入力されたシリアルコード: ${serialCode}`;
+    </script>
+</body>
+</html>
